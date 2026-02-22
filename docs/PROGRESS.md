@@ -6,19 +6,25 @@
 ## Current State
 
 ### Infrastructure ✅
-- Git repo established at `prism-vale` on GitHub (bobbyely)
-- SSH auth working (ed25519 key, remote set to SSH)
-- Git identity configured: Bobby Ely / robert.w.ely@gmail.com
-- Godot 4.4.x project created at repo root
+- Git repo established at `prism-vale-test`
+- Godot 4.6 project created at repo root (Forward+, Jolt Physics, D3D12)
 
-### Scripts Written (not yet wired into Godot scenes)
-- `scenes/player/player.gd` — full player controller (movement, camera, animation state machine)
-  - Needs node paths adjusted once scene is built in Godot
+### Assets ✅
+- Mixamo character downloaded — custom character "River" (not Y Bot)
+- 6 FBX files imported into Godot at `assets/models/test_models/River/`:
+  - Idle, Walking, Running, Jump, Sweep Fall, Sitting Idle
+- Each FBX downloaded separately (correct pipeline — one animation per file)
+- **Confirm:** Were these downloaded "With Skin"? Critical for correct keyframes.
 
-### Docs
+### Scripts — Not Yet Started
+- `scenes/player/player.gd` — needs to be written (previous version from earlier repo may need rewrite for this project)
+- No other scripts exist yet
+
+### Docs ✅
 - `docs/MILESTONE_1.md` — full M1 scope and spec
 - `docs/HUMAN_ASSETS.md` v0.2 — Rob's asset pipeline and checklist
 - `docs/PROJECT_DESIGN.md` — game design overview
+- `docs/PROGRESS.md` — this file
 
 ---
 
@@ -27,11 +33,13 @@
 ### Done
 - Godot project created and open
 - Folder structure created inside Godot FileSystem panel
+- Mixamo FBX downloads (Idle, Walking, Running, Jump, Sweep Fall, Sitting Idle)
+- FBX files imported into Godot
 
 ### Not Done Yet
-- Mixamo FBX downloads (Idle, Walk, Run, Jump, Land — Y Bot, With Skin, In Place for locomotion)
-- FBX files imported into Godot
 - Player scene built in Godot
+- Level geometry (CSG blocks or Blender mesh)
+- Enemy placeholder mesh
 
 ---
 
@@ -42,16 +50,9 @@ This is the Phase 1 checkpoint from the milestone doc.
 
 **Steps in order:**
 
-1. **Download from Mixamo** (if not done)
-   - Y Bot character
-   - Animations: Idle, Walk, Run, Jump, Land
-   - Format: FBX Binary, With Skin, every time
-   - Locomotion anims (Walk, Run, Idle): tick In Place
-   - Save each FBX to `assets/models/characters/player_placeholder/`
+1. ~~**Download from Mixamo**~~ ✅ Done — River character, 6 animations
 
-2. **Import FBXs into Godot**
-   - Drag each FBX into the FileSystem panel at `assets/models/characters/player_placeholder/`
-   - Godot imports them automatically — don't change import settings yet
+2. ~~**Import FBXs into Godot**~~ ✅ Done — at `assets/models/test_models/River/`
 
 3. **Check what Godot named the animation clips**
    - Click one imported FBX in FileSystem
